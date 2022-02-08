@@ -1,7 +1,6 @@
 import { cars } from '../src/data.js';
 import { html } from './../node_modules/lit-html/lit-html.js';
 
-
 let catalogTemplate = (allCars) => html`
 <section id="car-listings">
     <h1>Car Listings</h1>
@@ -13,7 +12,6 @@ ${allCars.length > 0
     
     </div>
 </section>`
-
 
 let carTemplate = (car) => html`
 <div class="listing">
