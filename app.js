@@ -11,7 +11,6 @@ import { editPage } from './views/edit.js';
 import { profilePage } from './views/profile.js';
 import { searchPage } from './views/search.js';
 
-
 userNavigation();
 const main = document.getElementById('site-content')
 
@@ -29,15 +28,12 @@ page('/search', contextDecorator, searchPage);
 
 page.start();
 
-
-
 function contextDecorator(ctx, next) {
     ctx.render = (content) => render(content, main)
     ctx.userNavigation = userNavigation
 
     next();
 }
-
 
 function userNavigation() {
     const username = sessionStorage.getItem('username');
@@ -54,10 +50,7 @@ function userNavigation() {
     } else {
         [...profile.children].forEach(x => x.style.display = 'none');
         [...guest.children].forEach(x => x.style.display = 'block');
-
     }
-
-
 }
 
 async function logoutPage() {
