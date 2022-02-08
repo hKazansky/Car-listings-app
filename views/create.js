@@ -1,7 +1,6 @@
 import { createCar } from '../src/data.js';
 import { html } from './../node_modules/lit-html/lit-html.js';
 
-
 let createTemplate = (onSubmitCreate) => html`
 <section id="create-listing">
     <div class="container">
@@ -33,7 +32,6 @@ let createTemplate = (onSubmitCreate) => html`
         </form>
     </div>
 </section>`
-
 
 export async function createPage(ctx) {
     ctx.render(createTemplate(onSubmitCreate));
@@ -67,6 +65,4 @@ export async function createPage(ctx) {
             return alert(error.message);
         }
     }
-
 }
-
