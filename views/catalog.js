@@ -34,5 +34,4 @@ export async function catalogPage (ctx) {
     let allCars = await cars();
 
     ctx.render(catalogTemplate(allCars));
-
 }
