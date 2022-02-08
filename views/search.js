@@ -1,7 +1,6 @@
 import { searchCars } from '../src/data.js';
 import { html } from './../node_modules/lit-html/lit-html.js';
 
-
 let searchTemplate = (allCars = [], onClickSearch) => html`
 <section id="search-cars">
     <h1>Filter by year</h1>
@@ -17,7 +16,6 @@ let searchTemplate = (allCars = [], onClickSearch) => html`
             : html`<p class="no-cars"> No results.</p>`}
     </div>
 </section>`
-
 
 let carTemplate = (car) => html`
 <div class="listings">
@@ -39,14 +37,11 @@ let carTemplate = (car) => html`
         </div>
     </div>`
 
-
 export async function searchPage (ctx) {
     let year;
     let allCars;
 
-
     ctx.render(searchTemplate(allCars, onClickSearch))
-
 
     async function onClickSearch(){
     
@@ -54,6 +49,5 @@ export async function searchPage (ctx) {
         allCars = await searchCars(year);
 
         ctx.render(searchTemplate(allCars));
-
     }
 }
