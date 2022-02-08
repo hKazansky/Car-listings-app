@@ -1,4 +1,4 @@
-# testRepo - Car listings app;
+#Car listings app;
 An app that allows you to:
 
 - Register an account
