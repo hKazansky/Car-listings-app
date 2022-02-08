@@ -1,7 +1,6 @@
 import { deleteCar, getCarById } from '../src/data.js';
 import { html } from './../node_modules/lit-html/lit-html.js';
 
-
 let detailsTemplate = (car, onClickDelete, userId) => html`
 <section id="listing-details">
     <h1>Details</h1>
@@ -23,12 +22,9 @@ ${userId === car._ownerId
                  <a @click=${onClickDelete} href="javascript:void(0)" class="button-list">Delete</a>
             </div>`
         : ''}
-
         
     </div>
 </section>`
-
-
 
 export async function detailsPage(ctx) {
     let carId = ctx.params.id;
@@ -41,5 +37,4 @@ export async function detailsPage(ctx) {
 
         ctx.page.redirect('/catalog');
     }
-
 }
