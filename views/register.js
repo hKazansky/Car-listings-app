@@ -1,7 +1,6 @@
 import { register } from '../src/api.js';
 import { html } from './../node_modules/lit-html/lit-html.js';
 
-
 let registerTemplate = (onSubmitRegister) => html`
 <section id="register">
     <div class="container">
@@ -36,11 +35,8 @@ export async function registerPage(ctx) {
     async function onSubmitRegister(e) {
         e.preventDefault();
 
-
         let formData = new FormData(e.target);
-
         let { username, password, repeatPass } = Object.fromEntries(formData);
-
 
         if (!username || !password || !repeatPass) return alert('All fields are required!');
 
