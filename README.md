@@ -1,4 +1,4 @@
-    #Car listings app
+    # Car listings SPA app
 An app that allows you to:
 
 - Register an account
